@@ -1,4 +1,3 @@
-```markdown
 # 📧 Bulk Email Sender (SMTP Demo)
 
 > ⚠️ **Disclaimer:** This tool is for educational and internal testing purposes only. Do not use it to spam, harass, or target individuals without their explicit consent. Misuse may violate email service terms and local laws.
@@ -34,6 +33,7 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
    ```bash
    git clone https://github.com/yourusername/email_bomber.git
    cd email_bomber
+
    ```
 
 2. **Install Python (if not already installed)**  
