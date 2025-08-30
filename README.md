@@ -31,7 +31,7 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/email_bomber.git
+   githttps://github.com/TJsalv/Email-Bomber.git
    cd email_bomber
 
    ```
@@ -39,14 +39,7 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
 2. **Install Python (if not already installed)**  
    Download from [python.org](https://www.python.org/downloads/) and ensure it's added to your system PATH.
 
-3. **(Optional) Create a virtual environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   ```
-
-4. **Run the script**
+3. **Run the script**
 
    ```bash
    python email_bomber.py
@@ -120,12 +113,6 @@ This script helps you understand:
 - Gmail may block sign-ins from less secure apps. Use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en) for safer access.
 - This script does not support HTML formatting or attachments.
 - ASCII banner is purely aesthetic. Feel free to customize it.
-
----
-
-## 📜 License
-
-MIT License. See `LICENSE` file for details.
 
 ---
 
