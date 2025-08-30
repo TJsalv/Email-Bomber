@@ -1,109 +1,71 @@
-Ah! I understand now — you want **everything in a single, continuous `README.md`** without extra splits, so it’s one block you can copy-paste. Here’s the fully combined version:
+📧 SMS/Email Bomber
 
-```markdown
-# Email Bomber
+A simple Python script to send multiple emails to one or more recipients. Designed for testing purposes, notification stress-testing, or educational demonstrations on email automation. Use responsibly.
 
-A Python script to send emails to multiple recipients with customizable subject, message, and number of times to send. Includes input validation, retry login on incorrect credentials, and a simple ASCII banner.
+⚠️ Warning: Sending emails to recipients without their consent is considered spam and may be illegal. Only use this script for testing with your own accounts or recipients who have explicitly allowed you.
 
-This script allows sending emails to multiple recipients at once. You can set the subject, message, and the number of times to send. It includes retry login if credentials are wrong, input validation to prevent crashes, and cross-platform terminal clearing with a simple ASCII banner.
+Features
 
-```
+Send multiple emails to one or more recipients at once.
 
----
+Customizable subject and message body.
 
-\|  ****|               (*) | |  \_ \                | |
-\| |**   \_ \_\_ \_\_\_   \_\_ \_ *| | | |*) | \_\_\_  \_ \_\_ \_\_\_ | |*\_   \_\_\_ \_ \_\_
-\|  **| | '* ` _ \ / _` | | | |  \_ < / \_ | '* \` \_ | '\_ \ / \_ \ '**|
-\| |****| | | | | | (*| | | | | |*) | (*) | | | | | | |*) |  **/ |
-|******|*| |*| |*|\_*,*|*|*| |***\_/ \_**/|*| |*| |*|*.**/ \_\_\_|\_|
+Retry login on authentication failure.
 
-````
+Clean terminal interface with an ASCII banner.
 
-Step-by-step guide to execute:
+Requirements
 
-1. **Install Python**
-   - Windows/Linux/macOS:  
-     ```bash
-     python --version
-     ```
-     If not installed, download from [python.org](https://www.python.org/downloads/).
-   - Termux (Android):  
-     ```bash
-     pkg update
-     pkg upgrade
-     pkg install python
-     python --version
-     ```
+Python 3.x
 
-2. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/EmailBomber.git
-   cd EmailBomber
-````
+smtplib (built-in Python library)
 
-* Termux tip: If `git` is not installed:
+Installation
 
-  ```bash
-  pkg install git
-  ```
+Clone the repository:
 
-3. **(Optional) Create a virtual environment**
+git clone https://github.com/yourusername/sms-email-bomber.git
+cd sms-email-bomber
 
-   * Windows/Linux/macOS:
 
-     ```bash
-     python -m venv venv
-     ```
+Run the script:
 
-     Activate:
+python bomber.py
 
-     * Windows:
+Usage
 
-       ```bash
-       venv\Scripts\activate
-       ```
-     * Linux/macOS/Termux:
+Enter your email credentials (the script uses Gmail SMTP).
 
-       ```bash
-       source venv/bin/activate
-       ```
+Enter recipient emails separated by space.
 
-4. **Install required packages**
-   No external packages required — uses built-in Python libraries (`smtplib`, `os`, `time`).
+Input your email subject and message.
 
-5. **Run the script**
+Specify how many times the email should be sent.
 
-   ```bash
-   python EmailBomber.py
-   ```
+Example:
 
-   Works on Windows, Linux/macOS, and Termux.
+Enter Email: myemail@gmail.com
+Enter Password: ********
+Enter recipient emails separated by space: test1@example.com test2@example.com
+Enter Subject: Test Email
+Enter Message: Hello! This is a test.
+Times you want to send: 5
 
-6. **Provide inputs**
 
-   * Enter your email and password.
-   * Enter recipient emails separated by commas.
-   * Enter subject and message.
-   * Enter number of times to send.
-     The script will retry login if credentials are incorrect.
+The script will send the email 5 times to each recipient.
 
-7. **Observe output**
-   The terminal displays banner and status messages like:
+Important Notes
 
-   ```
-   Email sent to example@gmail.com! (1/5)
-   ```
+Make sure Less Secure Apps is enabled for Gmail, or use an App Password for accounts with 2FA.
 
-   It repeats for all recipients and the specified number of times.
+Avoid sending unsolicited emails. Misuse may lead to your email account being blocked.
 
-8. **Done**
-   The script finishes after sending all emails. You can rerun anytime with new inputs.
+This script is intended for educational purposes only.
 
-**Disclaimer:** This script is for educational purposes only. Do not use it for spamming or malicious activity. The author is not responsible for any misuse.
-
-**Tips:** Use `clear_terminal()` in your script for a cleaner output. Never push real credentials to GitHub — use test accounts safely.
-
-```
-
----
-
+Screenshot / Preview
+  ______                 _ _   ____                  _               
+ |  ____|               (_) | |  _ \                | |              
+ | |__   _ __ ___   __ _ _| | | |_) | ___  _ __ ___ | |__   ___ _ __ 
+ |  __| | '_ ` _ \ / _` | | | |  _ < / _ \| '_ ` _ \| '_ \ / _ \ '__|
+ | |____| | | | | | (_| | | | | |_) | (_) | | | | | | |_) |  __/ |  
+ |______|_| |_| |_|\__,_|_|_| |____/ \___/|_| |_| |_|_.__/ \___|_|  
