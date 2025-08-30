@@ -1,77 +1,114 @@
-# 📧 SMS/Email Bomber
+# Email Bomber
 
-A Python script to send multiple emails to one or more recipients.  
-Designed for testing purposes, notification stress-testing, or educational demonstrations on email automation.  
+A Python script to send emails to multiple recipients with customizable subject, message, and number of times to send. Includes input validation, retry login on incorrect credentials, and a simple ASCII banner.
 
-> ⚠️ **Warning:** Sending emails to recipients without their consent is considered spam and may be illegal. Only use this script for testing with your own accounts or recipients who have explicitly allowed you.
+This script allows sending emails to multiple recipients at once. You can set the subject, message, and the number of times to send. It includes retry login if credentials are wrong, input validation to prevent crashes, and cross-platform terminal clearing with a simple ASCII banner.
+
+---
+
+## Banner
+
+| | () | | _ \ | |
+| | _ __ ___ __ _ | | | |) | ___ _ __ ___ | |_ ___ _ __
+| | | ' _ \ / _ | | | | _ < / _ | ' ` _ | '_ \ / _ \ '|
+| || | | | | | (| | | | | |) | () | | | | | | |) | / |
+||| || ||_,||| |_/ _/|| || ||./ ___|_|
+
+yaml
+Copy code
 
 ---
 
 ## Features
 
-- Send multiple emails to one or more recipients at once.
-- Customizable subject and message body.
-- Retry login on authentication failure.
-- Clean terminal interface with an ASCII banner.
+- Send emails to **multiple recipients** at once.
+- Set **subject**, **message**, and **number of times** to send.
+- **Retry login** if the email/password is wrong.
+- Input validation to prevent crashes from invalid inputs.
+- Cross-platform terminal **clearing** and banner display.
 
 ---
 
-## Requirements
+## Step-by-Step Execution Guide
 
-- Python 3.x
-- `smtplib` (built-in Python library)
+### 1. Install Python
 
----
-
-## Installation
-
-1. Clone the repository:
-
+- **Windows/Linux/macOS:**
 ```bash
-git clone https://github.com/yourusername/sms-email-bomber.git
-cd sms-email-bomber
-Run the script:
+python --version
+If not installed, download from python.org.
+
+Termux (Android):
 
 bash
 Copy code
-python bomber.py
-Usage
-Enter your email credentials (Gmail SMTP).
-
-Enter recipient emails separated by space.
-
-Input your email subject and message.
-
-Specify how many times the email should be sent.
-
-Example:
-
-text
+pkg update
+pkg upgrade
+pkg install python
+python --version
+2. Clone the Repository
+bash
 Copy code
-Enter Email: myemail@gmail.com
-Enter Password: ********
-Enter recipient emails separated by space: test1@example.com test2@example.com
-Enter Subject: Test Email
-Enter Message: Hello! This is a test.
-Times you want to send: 5
-The script will send the email 5 times to each recipient.
+git clone https://github.com/YOUR_USERNAME/EmailBomber.git
+cd EmailBomber
+Termux tip: If git is not installed:
 
-Important Notes
-Make sure Less Secure Apps is enabled for Gmail, or use an App Password if you have 2FA enabled.
-
-Avoid sending unsolicited emails. Misuse may lead to your email account being blocked.
-
-This script is intended for educational purposes only.
-
-Preview
-markdown
+bash
 Copy code
-  ______                 _ _   ____                  _               
- |  ____|               (_) | |  _ \                | |              
- | |__   _ __ ___   __ _ _| | | |_) | ___  _ __ ___ | |__   ___ _ __ 
- |  __| | '_ ` _ \ / _` | | | |  _ < / _ \| '_ ` _ \| '_ \ / _ \ '__|
- | |____| | | | | | (_| | | | | |_) | (_) | | | | | | |_) |  __/ |  
- |______|_| |_| |_|\__,_|_|_| |____/ \___/|_| |_| |_|_.__/ \___|_|  
-pgsql
+pkg install git
+3. (Optional) Create a Virtual Environment
+Windows/Linux/macOS:
+
+bash
 Copy code
-****
+python -m venv venv
+Activate:
+
+Windows:
+
+bash
+Copy code
+venv\Scripts\activate
+Linux/macOS/Termux:
+
+bash
+Copy code
+source venv/bin/activate
+4. Install Required Packages
+No external packages required — uses built-in Python libraries (smtplib, os, time).
+
+5. Run the Script
+bash
+Copy code
+python EmailBomber.py
+(Works on Windows, Linux/macOS, and Termux)
+
+6. Provide Inputs
+Enter your email and password.
+
+Enter recipient emails separated by commas.
+
+Enter subject and message.
+
+Enter number of times to send.
+
+The script will retry login if credentials are incorrect.
+
+7. Observe Output
+The terminal displays banner and status messages like:
+
+css
+Copy code
+Email sent to example@gmail.com! (1/5)
+It repeats for all recipients and the specified number of times.
+
+8. Done
+The script finishes after sending all emails. You can rerun anytime with new inputs.
+
+Disclaimer
+This script is for educational purposes only. Do not use it for spamming or malicious activity. The author is not responsible for any misuse.
+
+Tips
+Use clear_terminal() in your script for a cleaner output.
+
+Never push real credentials to GitHub — use test accounts safely.
