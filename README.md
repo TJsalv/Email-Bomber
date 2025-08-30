@@ -1,114 +1,136 @@
-# Email Bomber
+```markdown
+# 📧 Bulk Email Sender (SMTP Demo)
 
-A Python script to send emails to multiple recipients with customizable subject, message, and number of times to send. Includes input validation, retry login on incorrect credentials, and a simple ASCII banner.
+> ⚠️ **Disclaimer:** This tool is for educational and internal testing purposes only. Do not use it to spam, harass, or target individuals without their explicit consent. Misuse may violate email service terms and local laws.
 
-This script allows sending emails to multiple recipients at once. You can set the subject, message, and the number of times to send. It includes retry login if credentials are wrong, input validation to prevent crashes, and cross-platform terminal clearing with a simple ASCII banner.
-
----
-
-## Banner
-
-| | () | | _ \ | |
-| | _ __ ___ __ _ | | | |) | ___ _ __ ___ | |_ ___ _ __
-| | | ' _ \ / _ | | | | _ < / _ | ' ` _ | '_ \ / _ \ '|
-| || | | | | | (| | | | | |) | () | | | | | | |) | / |
-||| || ||_,||| |_/ _/|| || ||./ ___|_|
-
-yaml
-Copy code
+A Python script that demonstrates how to send multiple emails using Gmail's SMTP server. Designed for devs, testers, and curious minds who want to explore how SMTP works under the hood.
 
 ---
 
-## Features
+## 🚀 Features
 
-- Send emails to **multiple recipients** at once.
-- Set **subject**, **message**, and **number of times** to send.
-- **Retry login** if the email/password is wrong.
-- Input validation to prevent crashes from invalid inputs.
-- Cross-platform terminal **clearing** and banner display.
+- 🔐 Login via Gmail SMTP (`smtp.gmail.com:587`)
+- 📬 Send custom messages to multiple recipients
+- 🔁 Loop-based sending with progress output
+- 🖼 ASCII banner for terminal flair
+- 🧼 Clears terminal between steps for clean UX
 
 ---
 
-## Step-by-Step Execution Guide
+## 🛠 Requirements
 
-### 1. Install Python
+- Python 3.x
+- Gmail account with [App Passwords](https://support.google.com/accounts/answer/185833?hl=en) enabled
+- Internet connection
 
-- **Windows/Linux/macOS:**
-```bash
-python --version
-If not installed, download from python.org.
+---
 
-Termux (Android):
+## 📦 Installation Guide
 
-bash
-Copy code
-pkg update
-pkg upgrade
-pkg install python
-python --version
-2. Clone the Repository
-bash
-Copy code
-git clone https://github.com/YOUR_USERNAME/EmailBomber.git
-cd EmailBomber
-Termux tip: If git is not installed:
+### 💻 On Desktop (Windows/Linux/macOS)
 
-bash
-Copy code
-pkg install git
-3. (Optional) Create a Virtual Environment
-Windows/Linux/macOS:
+1. **Clone the repository**
 
-bash
-Copy code
-python -m venv venv
-Activate:
+   ```bash
+   git clone https://github.com/yourusername/email_bomber.git
+   cd email_bomber
+   ```
 
-Windows:
+2. **Install Python (if not already installed)**  
+   Download from [python.org](https://www.python.org/downloads/) and ensure it's added to your system PATH.
 
-bash
-Copy code
-venv\Scripts\activate
-Linux/macOS/Termux:
+3. **(Optional) Create a virtual environment**
 
-bash
-Copy code
-source venv/bin/activate
-4. Install Required Packages
-No external packages required — uses built-in Python libraries (smtplib, os, time).
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   ```
 
-5. Run the Script
-bash
-Copy code
-python EmailBomber.py
-(Works on Windows, Linux/macOS, and Termux)
+4. **Run the script**
 
-6. Provide Inputs
-Enter your email and password.
+   ```bash
+   python email_bomber.py
+   ```
 
-Enter recipient emails separated by commas.
+---
 
-Enter subject and message.
+### 📱 On Android (Termux)
 
-Enter number of times to send.
+1. **Install Termux from F-Droid**  
+   [https://f-droid.org/en/packages/com.termux/](https://f-droid.org/en/packages/com.termux/)
 
-The script will retry login if credentials are incorrect.
+2. **Update and install Python**
 
-7. Observe Output
-The terminal displays banner and status messages like:
+   ```bash
+   pkg update && pkg upgrade
+   pkg install python git
+   ```
 
-css
-Copy code
-Email sent to example@gmail.com! (1/5)
-It repeats for all recipients and the specified number of times.
+3. **Clone the repository**
 
-8. Done
-The script finishes after sending all emails. You can rerun anytime with new inputs.
+   ```bash
+   git clone https://github.com/yourusername/email_bomber.git
+   cd email_bomber
+   ```
 
-Disclaimer
-This script is for educational purposes only. Do not use it for spamming or malicious activity. The author is not responsible for any misuse.
+4. **Run the script**
 
-Tips
-Use clear_terminal() in your script for a cleaner output.
+   ```bash
+   python email_bomber.py
+   ```
 
-Never push real credentials to GitHub — use test accounts safely.
+> 🔐 **Note:** Gmail may block sign-ins from Termux unless you use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en). Regular passwords often trigger security blocks.
+
+---
+
+## 🧪 Usage
+
+You'll be prompted to:
+
+1. Enter your Gmail address and password
+2. Input recipient emails (space-separated)
+3. Define subject and message
+4. Choose how many times to send each message
+
+Example:
+
+```
+Enter Email: yourname@gmail.com
+Enter Password: ********
+Enter recipient emails separated by space: test1@example.com test2@example.com
+Enter Subject: Hello from SMTP
+Enter Message: This is a test message.
+Times you want to send: 3
+```
+
+---
+
+## 🧠 Educational Purpose
+
+This script helps you understand:
+
+- SMTP authentication and TLS handshake
+- Email header formatting
+- Loop-based message dispatching
+
+---
+
+## 🧹 Notes
+
+- Gmail may block sign-ins from less secure apps. Use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en) for safer access.
+- This script does not support HTML formatting or attachments.
+- ASCII banner is purely aesthetic. Feel free to customize it.
+
+---
+
+## 📜 License
+
+MIT License. See `LICENSE` file for details.
+
+---
+
+## 🙋‍♂️ Author
+
+Built by [Tristan](https://github.com/TJsalv) — for testing, learning, and experiment only
+
+
