@@ -31,7 +31,7 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
 1. **Clone the repository**
 
    ```bash
-   githttps://github.com/TJsalv/Email-Bomber.git
+   git clone https://github.com/TJsalv/Email-Bomber.git
    cd email_bomber
 
    ```
@@ -62,7 +62,7 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
 3. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/email_bomber.git
+   git clone https://github.com/TJsalv/Email-Bomber.git
    cd email_bomber
    ```
 
