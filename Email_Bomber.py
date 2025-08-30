@@ -34,13 +34,10 @@ def sendEmail(email, password, recipient_emails, subject, message, count):
             email, password = Account() #retry login account
 def emailbomber():
     print(r""" 
-  ______                 _ _   ____                  _               
- |  ____|               (_) | |  _ \                | |              
- | |__   _ __ ___   __ _ _| | | |_) | ___  _ __ ___ | |__   ___ _ __ 
- |  __| | '_ ` _ \ / _` | | | |  _ < / _ \| '_ ` _ \| '_ \ / _ \ '__|
- | |____| | | | | | (_| | | | | |_) | (_) | | | | | | |_) |  __/ |  
- |______|_| |_| |_|\__,_|_|_| |____/ \___/|_| |_| |_|_.__/ \___|_|  
-          
+    ____           _ __  ___             __          
+  / __/_ _  ___ _(_) / / _ )___  __ _  / /  ___ ____
+ / _//  ' \/ _ `/ / / / _  / _ \/  ' \/ _ \/ -_) __/
+/___/_/_/_/\_,_/_/_/ /____/\___/_/_/_/_.__/\__/_/                                                 
           """)
 #clears the terminal
 def clear():
@@ -74,6 +71,7 @@ while True:
         
 #run the main code
 sendEmail(email, password, recipient_emails, subject, message, count)
+
 
 
 
