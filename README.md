@@ -56,24 +56,42 @@ A Python script that demonstrates how to send multiple emails using Gmail's SMTP
 
    ```bash
    pkg update && pkg upgrade
-   pkg install python git
+   pkg uninstall python
+   pkg install python
    ```
 
-3. **Clone the repository**
+3. **Fix SSL Support (Required for Gmail SMTP)**  
+   If you get an error like `RuntimeError: No SSL support included in this Python`, do the following:
 
    ```bash
-   git clone https://github.com/TJsalv/Email-Bomber.git
+   pkg install openssl
+   pkg reinstall python
+   ```
+
+   Then verify SSL is working:
+
+   ```bash
+   python
+   >>> import ssl
+   >>> ssl.OPENSSL_VERSION
+   ```
+
+   You should see something like `OpenSSL 3.x.x`. If not, SSL is still broken.
+
+4. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/email_bomber.git
    cd email_bomber
    ```
 
-4. **Run the script**
+5. **Run the script**
 
    ```bash
    python email_bomber.py
    ```
 
 > 🔐 **Note:** Gmail may block sign-ins from Termux unless you use [App Passwords](https://support.google.com/accounts/answer/185833?hl=en). Regular passwords often trigger security blocks.
-
 ---
 
 ## 🧪 Usage
